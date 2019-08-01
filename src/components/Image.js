@@ -8,10 +8,15 @@ class Image extends Component {
   constructor(props) {
     super(props);
   }
+  
   render() {
     return (
-      <img src={this.props.image} width="150" height="150"></img>
+      <img src={this.props.src} className="gallery-image" onClick={this.imageClicked.bind(this)}></img>
       )
+  }
+  
+  imageClicked() {
+    console.log('image clicked!');
   }
 }
 

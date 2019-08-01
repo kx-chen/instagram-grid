@@ -46,3 +46,30 @@ code {
     transform: rotate(360deg);
   }
 }
+
+.TopBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 39px;
+    border-bottom: 1px solid #dddddd;
+    background-color: #f4f4f4;
+}
+
+#settings-toggle {
+  float: right;
+  margin: 7px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.TopBar-dropdown {
+    margin-top: 1px;
+    padding: 8px;
+    background-color: #f7f7f7;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
