@@ -10,14 +10,34 @@ class Image extends Component {
   }
   
   render() {
+    let nameClass = "gallery-image";
+    let otherName = "not-selected";
+    
+    if (this.props.selected) {
+      nameClass = "gallery-image blur";
+      otherName = "gallery-item-info";
+    }
+    
+    let styles = {
+      "background-image": `url(${this.props.src})`,
+      "width": "150px",
+      "height": "150px",
+      "background-size": "cover",
+    };
+    
     return (
-      <img src={this.props.src} className="gallery-image" onClick={this.imageClicked.bind(this)}></img>
+      
+			<div className="gallery-item">
+				<img src={this.props.src} onClick={() => this.props.handleClick(this.props.keyId)} className="gallery-image" alt=""/>
+
+				<div className={otherName} onClick={() => this.props.handleClick(this.props.keyId)}>
+          Selected
+				</div>
+
+			</div>
       )
   }
-  
-  imageClicked() {
-    console.log('image clicked!');
-  }
+
 }
 
 export default Image;

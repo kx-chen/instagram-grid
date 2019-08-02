@@ -20,9 +20,6 @@ class TopBarDropDown extends Component {
       return (
       <ul className="TopBar-dropdown" >
           <li><p>Settings</p></li>
-          <hr/>
-          <li><a>Remove All Locations</a></li>
-          <hr/>
           <li><a target="_blank" href="https://github.com/kx-chen">Developer</a></li>
           <li><a target="_blank" href="https://forms.gle/5F1UWdv5L6YAbAnAA">Feedback</a></li>
       </ul>
