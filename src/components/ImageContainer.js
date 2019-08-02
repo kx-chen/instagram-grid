@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../assets/App.css';
 import '../assets/ImageContainer.css';
 import Image from './Image.js';
+import MoveOptions from './MoveOptions.js';
 import { arrayMove, SortableElement, SortableContainer } from 'react-sortable-hoc';
 
 const gridStyles = {
@@ -67,6 +68,7 @@ class ImageContainer extends Component {
     
     return (
       <div className="container">
+          <MoveOptions show={true} title="Feed Planner"/>
         <div className="gallery">
           <Grid items={this.state.images} onSortEnd={this.onSortEnd} axis="xy" />
         </div>

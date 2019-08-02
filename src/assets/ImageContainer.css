@@ -15,10 +15,6 @@
 }
 
 
-:root {
-    font-size: 10px;
-}
-
 *,
 *::before,
 *::after {
@@ -51,6 +47,7 @@ img {
     flex-wrap: wrap;
     margin: -1rem -1rem;
     padding-bottom: 3rem;
+    padding-top: 1em;
 }
 
 .gallery-item {

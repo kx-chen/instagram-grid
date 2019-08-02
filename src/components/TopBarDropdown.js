@@ -1,10 +1,5 @@
-      
-      
-
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import '../assets/App.css';
-import Bolly from '../Bolly.js';
 
 
 class TopBarDropDown extends Component {
@@ -20,8 +15,8 @@ class TopBarDropDown extends Component {
       return (
       <ul className="TopBar-dropdown" >
           <li><p>Settings</p></li>
-          <li><a target="_blank" href="https://github.com/kx-chen">Developer</a></li>
-          <li><a target="_blank" href="https://forms.gle/5F1UWdv5L6YAbAnAA">Feedback</a></li>
+          <li><a target="_blank" href="https://github.com/kx-chen" rel="noopener noreferrer">Developer</a></li>
+          <li><a target="_blank" href="https://forms.gle/5F1UWdv5L6YAbAnAA" rel="noopener noreferrer">Feedback</a></li>
       </ul>
       )
     }

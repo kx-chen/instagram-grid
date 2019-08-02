@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import '../assets/App.css';
 
 
 
 class MoveOptions extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     if(this.props.show){
      return (
-      <div className="MoveOptions">
-       2 selected. <button onClick={this.props.confirmSwap}>Confirm swap</button>
-       </div>
-      )
+         <div>
+             <Button variant="primary">+ Add Image</Button>
+         </div>
+        )
     }
     
     return null;

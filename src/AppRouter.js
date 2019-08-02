@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import './assets/App.css';
-import App from './components/App.js';
 import ImageContainer from './components/ImageContainer.js';
 import TopBar from './components/TopBar.js';
 
