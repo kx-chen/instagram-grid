@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import '../assets/App.css';
-import Bolly from '../Bolly.js';
 
 
 class Image extends Component {
@@ -26,12 +24,11 @@ class Image extends Component {
     };
     
     return (
-      
 			<div className="gallery-item">
 				<img src={this.props.src} onClick={() => this.props.handleClick(this.props.keyId)} className="gallery-image" alt=""/>
 
 				<div className={otherName} onClick={() => this.props.handleClick(this.props.keyId)}>
-          Selected
+                    Selected
 				</div>
 
 			</div>

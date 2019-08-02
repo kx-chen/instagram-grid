@@ -1,11 +1,41 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import '../assets/App.css';
 import '../assets/ImageContainer.css';
-import Bolly from '../Bolly.js';
 import Image from './Image.js';
-import MoveOptions from './MoveOptions';
+import { arrayMove, SortableElement, SortableContainer } from 'react-sortable-hoc';
 
+const gridStyles = {
+    display: 'grid',
+    gridTemplateColumns: 'auto auto auto',
+    gridGap: '2px',
+};
+
+const gridItemStyles = {
+    height: '100px',
+    backgroundColor: '#e5e5e5',
+};
+
+
+const Grid = SortableContainer(({ items }) =>
+    <div style={gridStyles}>
+          {items.map((image, index) =>
+              <GridItem
+                  key={`item-${index}`}
+                  index={index}
+                  value={image}
+              />
+          )}
+    </div>
+);
+
+
+const GridItem = SortableElement(({ value }) =>
+        <Image src={value.src}
+               keyId={value.id}
+               handleClick={() => console.log('click')}
+               selected={false}
+               style={gridItemStyles}/>
+);
 
 class ImageContainer extends Component {
   constructor(props) {
@@ -31,79 +61,26 @@ class ImageContainer extends Component {
       showMoveOptions: false,
     };
   }
-  
+
   render() {
     console.log(this.state);
-    this.images = this.renderImages();
     
     return (
       <div className="container">
-        <MoveOptions show={this.state.showMoveOptions} confirmSwap={this.confirmSwap.bind(this)}/>
         <div className="gallery">
-          {this.images}
+          <Grid items={this.state.images} onSortEnd={this.onSortEnd} axis="xy" />
         </div>
       </div>
       )
   }
-  
-  handleImageClick(id) {
-    // at least one item was selected
-      if (this.state.selected.length === 1) {
-        // same item selected, deselect it
-        if(this.state.selected[0] === id){
-          this.setState((state, props) => ({
-            selected: [],
-            showMoveOptions: false,
-        }));
-          return;
-        }
-        
-      // set the second selection
-       this.setState((state, props) => ({
-        selected: [this.state.selected[0], id],
-         showMoveOptions: true,
-      }));
-        
-    } else {
-      // set first selection
-       this.setState((state, props) => ({
-        selected: [id],
-         showMoveOptions: false,
-      }));
-    }
 
-  }
-  
-  renderImages() {
-    let renderedImages = [];
-        
-    this.state.images.forEach((image, index) => {
-      let selected = false;
-      if(this.state.selected.includes(index)) {
-        selected = true;
-      }
-      renderedImages.push(
-      <div className="gallery-item">
-				<Image src={image.src} keyId={index} handleClick={this.handleImageClick.bind(this)} selected={selected}/>
-				</div>
-	    )
+  onSortEnd = ({ oldIndex, newIndex }) => {
+      console.log('onSortEnd');
+    this.setState({
+      images: arrayMove(this.state.images, oldIndex, newIndex),
     });
-    return renderedImages;
-  }
-  
-  confirmSwap(){
-    console.log('swapped!');
-    let images = this.state.images;
-    let temp = this.state.images[this.state.selected[0]];
-    images[this.state.selected[0]] = images[this.state.selected[1]];
-    images[this.state.selected[1]] = temp;
-    
-     this.setState((state, props) => ({
-       images: images,
-       selected: [],
-       showMoveOptions: false,
-    }));
-  }
+  };
 }
+
 
 export default ImageContainer;
