@@ -8,12 +8,20 @@ import TopBar from './components/TopBar.js';
 
 class AppRouter extends Component {
   render() {
+      window.hsp.init({
+          "useTheme": false
+      });
+
+      window.hsp.getAuth((data) => {
+         console.log(data);
+      });
+
     return (
     <Router>
         <TopBar/>
         <Link to="/" className="App-link">Home</Link>
       
-        <Route path="/" exact render={() => <ImageContainer/>}></Route>
+        <Route path="/" exact render={() => <ImageContainer/>}/>
     </Router>
     );
   }
