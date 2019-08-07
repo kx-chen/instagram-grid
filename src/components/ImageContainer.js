@@ -1,42 +1,13 @@
 import React, { Component } from 'react';
 import '../assets/App.css';
 import '../assets/ImageContainer.css';
-import Picture from './Picture.js';
 import Upload from './Upload.js';
-import { arrayMove, SortableElement, SortableContainer } from 'react-sortable-hoc';
+import { arrayMove } from 'react-sortable-hoc';
 import ContextMenuImage from "./ContextMenu";
 import '../assets/react-contextmenu.css';
 import Resizer from 'react-image-file-resizer';
+import Grid from './Grid';
 
-const gridStyles = {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
-    gridTemplateRows: 'auto auto auto',
-    gridGap: '2px',
-};
-
-const Grid = SortableContainer(({ items, disabled }) =>
-    <div style={gridStyles}>
-          {items.map((image, index) =>
-              <GridItem
-                  key={`item-${index}`}
-                  index={index}
-                  value={image}
-                  disabled={disabled}
-              />
-          )}
-    </div>
-);
-
-
-const GridItem = SortableElement(({ value, disabled }) =>
-        <Picture src={value.src}
-                 keyId={value.id}
-                 selected={false}
-                 disabled={disabled}
-
-        />
-);
 
 class ImageContainer extends Component {
   constructor(props) {
@@ -127,6 +98,5 @@ class ImageContainer extends Component {
         });
     }
 }
-
 
 export default ImageContainer;
