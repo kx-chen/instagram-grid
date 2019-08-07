@@ -14,11 +14,6 @@ const gridStyles = {
     gridGap: '2px',
 };
 
-const gridItemStyles = {
-    "height": "calc(89vw / 3)"
-};
-
-
 const Grid = SortableContainer(({ items, disabled }) =>
     <div style={gridStyles}>
           {items.map((image, index) =>
@@ -38,7 +33,6 @@ const GridItem = SortableElement(({ value, disabled }) =>
                keyId={value.id}
                handleClick={() => console.log('click')}
                selected={false}
-               style={gridItemStyles}
                disabled={disabled}
 
         />

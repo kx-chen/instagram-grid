@@ -55,6 +55,7 @@ img {
     margin: 1rem;
     color: #fff;
     cursor: pointer;
+    height: calc(89vw / 3);
 }
 
 .gallery-item-info {
@@ -83,11 +84,11 @@ input {
 
 @supports (display: grid) {
 
-    .gallery {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-gap: 0.3rem;
-    }
+    /*.gallery {*/
+    /*    display: grid;*/
+    /*    grid-template-columns: auto auto auto;*/
+    /*    grid-gap: 0.3rem;*/
+    /*}*/
 
     .gallery-item,
     .gallery {
