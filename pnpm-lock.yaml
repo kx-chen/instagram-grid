@@ -3,6 +3,7 @@ dependencies:
   cors: 2.8.5
   express: 4.17.1
   express-form-data: 2.0.10
+  gh-pages: 2.0.1
   node-fetch: 2.6.0
   prop-types: 15.7.2
   react: 16.8.6
@@ -2691,6 +2692,13 @@ packages:
     resolution:
       integrity: sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/async/-/async-1.5.2.tgz'
+  /async/2.6.3:
+    dependencies:
+      lodash: 4.17.15
+    dev: false
+    resolution:
+      integrity: sha1-1yYl4jRKNlbjo61Pp0n6gymdgv8=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/async/-/async-2.6.3.tgz'
   /asynckit/0.4.0:
     dev: false
     resolution:
@@ -4587,6 +4595,11 @@ packages:
     resolution:
       integrity: sha1-K47UyJG33jIA4UQSpbgkjHr1Bco=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/elliptic/-/elliptic-6.5.0.tgz'
+  /email-addresses/3.0.3:
+    dev: false
+    resolution:
+      integrity: sha1-/DxpUvaNokI5kU6YLIp3g7wu2W0=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/email-addresses/-/email-addresses-3.0.3.tgz'
   /emoji-regex/7.0.3:
     dev: false
     resolution:
@@ -5304,6 +5317,34 @@ packages:
     resolution:
       integrity: sha1-+OC6C1mZGLUa3+RdZtHnca1WD6o=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/file-loader/-/file-loader-3.0.1.tgz'
+  /filename-reserved-regex/1.0.0:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-5hz4BfDeHJhFZ9A4bcXfUO5a9+Q=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/filename-reserved-regex/-/filename-reserved-regex-1.0.0.tgz'
+  /filenamify-url/1.0.0:
+    dependencies:
+      filenamify: 1.2.1
+      humanize-url: 1.0.1
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-syvYExnvWGO3MHi+1Q9GpPeXX1A=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/filenamify-url/-/filenamify-url-1.0.0.tgz'
+  /filenamify/1.2.1:
+    dependencies:
+      filename-reserved-regex: 1.0.0
+      strip-outer: 1.0.1
+      trim-repeated: 1.0.0
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-qfL/0RxQO+0wABUCknI3jx8TZaU=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/filenamify/-/filenamify-1.2.1.tgz'
   /filesize/3.6.1:
     dev: false
     engines:
@@ -5635,6 +5676,23 @@ packages:
     resolution:
       integrity: sha1-Xv+OPmhNVprkyysSgmBOi6YhSfo=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/getpass/-/getpass-0.1.7.tgz'
+  /gh-pages/2.0.1:
+    dependencies:
+      async: 2.6.3
+      commander: 2.20.0
+      email-addresses: 3.0.3
+      filenamify-url: 1.0.0
+      fs-extra: 7.0.1
+      globby: 6.1.0
+      graceful-fs: 4.2.1
+      rimraf: 2.6.3
+    dev: false
+    engines:
+      node: '>=6'
+    hasBin: true
+    resolution:
+      integrity: sha1-rv5HpDuNnSqjEwV2sz/pVkHimi8=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/gh-pages/-/gh-pages-2.0.1.tgz'
   /glob-parent/3.1.0:
     dependencies:
       is-glob: 3.1.0
@@ -6088,6 +6146,16 @@ packages:
     resolution:
       integrity: sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/https-browserify/-/https-browserify-1.0.0.tgz'
+  /humanize-url/1.0.1:
+    dependencies:
+      normalize-url: 1.9.1
+      strip-url-auth: 1.0.1
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-9KuZ4NKIF0yk4eUEB8VfuuRk7/8=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/humanize-url/-/humanize-url-1.0.1.tgz'
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -6568,6 +6636,13 @@ packages:
     resolution:
       integrity: sha1-jvW33lBDej/cprToZe96pVy0gDY=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/is-path-inside/-/is-path-inside-1.0.1.tgz'
+  /is-plain-obj/1.1.0:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/is-plain-obj/-/is-plain-obj-1.1.0.tgz'
   /is-plain-object/2.0.4:
     dependencies:
       isobject: 3.0.1
@@ -8222,6 +8297,18 @@ packages:
     resolution:
       integrity: sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/normalize-range/-/normalize-range-0.1.2.tgz'
+  /normalize-url/1.9.1:
+    dependencies:
+      object-assign: 4.1.1
+      prepend-http: 1.0.4
+      query-string: 4.3.4
+      sort-keys: 1.1.2
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-LMDWazHqIwNkWENuNiDYWVTGbDw=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/normalize-url/-/normalize-url-1.9.1.tgz'
   /normalize-url/3.3.0:
     dev: false
     engines:
@@ -9667,6 +9754,13 @@ packages:
     resolution:
       integrity: sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/prelude-ls/-/prelude-ls-1.1.2.tgz'
+  /prepend-http/1.0.4:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/prepend-http/-/prepend-http-1.0.4.tgz'
   /pretty-bytes/5.3.0:
     dev: false
     engines:
@@ -9865,6 +9959,16 @@ packages:
     resolution:
       integrity: sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/qs/-/qs-6.7.0.tgz'
+  /query-string/4.3.4:
+    dependencies:
+      object-assign: 4.1.1
+      strict-uri-encode: 1.1.0
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-u7aTucqRXCMlFbIosaArYJBD2+s=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/query-string/-/query-string-4.3.4.tgz'
   /querystring-es3/0.2.1:
     dev: false
     engines:
@@ -11030,6 +11134,15 @@ packages:
     resolution:
       integrity: sha1-2Xa76ACve9IK4IWY1YI5NQiZPA0=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/sockjs/-/sockjs-0.3.19.tgz'
+  /sort-keys/1.1.2:
+    dependencies:
+      is-plain-obj: 1.1.0
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-RBttTTRnmPG05J6JIK37oOVD+a0=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/sort-keys/-/sort-keys-1.1.2.tgz'
   /source-list-map/2.0.1:
     dev: false
     resolution:
@@ -11231,6 +11344,13 @@ packages:
     resolution:
       integrity: sha1-1cdSgl5TZ+eG944Y5EXqIjoVWVI=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/stream-shift/-/stream-shift-1.0.0.tgz'
+  /strict-uri-encode/1.1.0:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz'
   /string-length/2.0.0:
     dependencies:
       astral-regex: 1.0.0
@@ -11356,6 +11476,22 @@ packages:
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/strip-json-comments/-/strip-json-comments-2.0.1.tgz'
+  /strip-outer/1.0.1:
+    dependencies:
+      escape-string-regexp: 1.0.5
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-sv0qv2YEudHmATBXGV34Nrip1jE=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/strip-outer/-/strip-outer-1.0.1.tgz'
+  /strip-url-auth/1.0.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-IrD6OkE4WzO+PzMVUbu4N/oM164=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/strip-url-auth/-/strip-url-auth-1.0.1.tgz'
   /style-loader/0.23.1:
     dependencies:
       loader-utils: 1.2.3
@@ -11671,6 +11807,15 @@ packages:
     resolution:
       integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/tr46/-/tr46-1.0.1.tgz'
+  /trim-repeated/1.0.0:
+    dependencies:
+      escape-string-regexp: 1.0.5
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-42RqLqTokTEr9+rObPsFOAvAHCE=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/trim-repeated/-/trim-repeated-1.0.0.tgz'
   /trim-right/1.0.1:
     dev: false
     engines:
@@ -12610,6 +12755,7 @@ specifiers:
   cors: ^2.8.5
   express: ^4.17.1
   express-form-data: ^2.0.10
+  gh-pages: '2.0'
   node-fetch: ^2.6.0
   prop-types: ^15.7.2
   react: ^16.8.6
