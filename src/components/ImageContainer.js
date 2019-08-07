@@ -7,7 +7,7 @@ import { arrayMove, SortableElement, SortableContainer } from 'react-sortable-ho
 
 const gridStyles = {
     display: 'grid',
-    gridTemplateColumns: 'auto auto auto',
+    gridTemplateColumns: '1fr 1fr 1fr',
     gridTemplateRows: 'auto auto auto',
     gridGap: '2px',
 };
@@ -17,25 +17,28 @@ const gridItemStyles = {
 };
 
 
-const Grid = SortableContainer(({ items }) =>
+const Grid = SortableContainer(({ items, disabled }) =>
     <div style={gridStyles}>
           {items.map((image, index) =>
               <GridItem
                   key={`item-${index}`}
                   index={index}
                   value={image}
+                  disabled={disabled}
               />
           )}
     </div>
 );
 
 
-const GridItem = SortableElement(({ value }) =>
+const GridItem = SortableElement(({ value, disabled }) =>
         <Image src={value.src}
                keyId={value.id}
                handleClick={() => console.log('click')}
                selected={false}
-               style={gridItemStyles}/>
+               style={gridItemStyles}
+               disabled={disabled}
+        />
 );
 
 class ImageContainer extends Component {
@@ -49,6 +52,7 @@ class ImageContainer extends Component {
       selected: [],
       uploading: false,
       inProgress: 0,
+        disabled: false,
     };
   }
 
@@ -57,11 +61,18 @@ class ImageContainer extends Component {
       <div className="container">
           <Upload show={true} title="Feed Planner"
                   onChange={this.addImage.bind(this)} done={this.state.done} inProgress={this.state.inProgress}/>
+          {/*<Button onClick={this.toggleSort.bind(this)}>Delete</Button>*/}
         <div className="gallery">
-          <Grid items={this.state.images} onSortEnd={this.onSortEnd} axis="xy" useWindowAsScrollContainer={true}/>
+          <Grid items={this.state.images} disabled={this.state.disabled} onSortEnd={this.onSortEnd} axis="xy" useWindowAsScrollContainer={true}/>
         </div>
       </div>
       )
+  }
+
+  toggleSort() {
+    this.setState((state) => ({
+       disabled: !state.disabled,
+    }));
   }
 
   onSortEnd = ({ oldIndex, newIndex }) => {
