@@ -4,6 +4,8 @@ import '../assets/ImageContainer.css';
 import Image from './Image.js';
 import Upload from './Upload.js';
 import { arrayMove, SortableElement, SortableContainer } from 'react-sortable-hoc';
+import ContextMenuImage from "./ContextMenu";
+import '../assets/react-contextmenu.css';
 
 const gridStyles = {
     display: 'grid',
@@ -38,6 +40,7 @@ const GridItem = SortableElement(({ value, disabled }) =>
                selected={false}
                style={gridItemStyles}
                disabled={disabled}
+
         />
 );
 
@@ -61,12 +64,21 @@ class ImageContainer extends Component {
       <div className="container">
           <Upload show={true} title="Feed Planner"
                   onChange={this.addImage.bind(this)} done={this.state.done} inProgress={this.state.inProgress}/>
-          {/*<Button onClick={this.toggleSort.bind(this)}>Delete</Button>*/}
         <div className="gallery">
           <Grid items={this.state.images} disabled={this.state.disabled} onSortEnd={this.onSortEnd} axis="xy" useWindowAsScrollContainer={true}/>
         </div>
+          <ContextMenuImage handleClick={this.handleDelete.bind(this)}/>
       </div>
       )
+  }
+
+  handleDelete(e, data) {
+      let images = this.state.images.filter((image) => {
+          return !(image.id === parseInt(data.target.id));
+      });
+      this.setState((state) => ({
+          images: images,
+      }));
   }
 
   toggleSort() {
