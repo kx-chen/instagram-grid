@@ -4,9 +4,12 @@ dependencies:
   express: 4.17.1
   express-form-data: 2.0.10
   node-fetch: 2.6.0
+  prop-types: 15.7.2
   react: 16.8.6
   react-bootstrap: 1.0.0-beta.10_react-dom@16.8.6+react@16.8.6
+  react-contextmenu: 2.11.0_d25cdf2bfc17c189dd7173f38a178e67
   react-dom: 16.8.6_react@16.8.6
+  react-image-file-resizer: 0.2.0
   react-router-dom: 5.0.1_react@16.8.6
   react-scripts: 3.0.1
   react-sortable-hoc: 1.9.1_react-dom@16.8.6+react@16.8.6
@@ -9978,6 +9981,21 @@ packages:
     resolution:
       integrity: sha1-NWNyh8sj+AHm7YAsK7epfh8E4/s=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/react-context-toolbox/-/react-context-toolbox-2.0.2.tgz'
+  /react-contextmenu/2.11.0_d25cdf2bfc17c189dd7173f38a178e67:
+    dependencies:
+      classnames: 2.2.6
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      react: 16.8.6
+      react-dom: 16.8.6_react@16.8.6
+    dev: false
+    peerDependencies:
+      prop-types: ^15.0.0
+      react: ^0.14.0 || ^15.0.0 || ^16.0.1
+      react-dom: ^0.14.0 || ^15.0.0 || ^16.0.1
+    resolution:
+      integrity: sha1-7FdhTm1ofOrsXAupfVajAslVHRc=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/react-contextmenu/-/react-contextmenu-2.11.0.tgz'
   /react-dev-utils/9.0.1:
     dependencies:
       '@babel/code-frame': 7.0.0
@@ -10029,6 +10047,11 @@ packages:
     resolution:
       integrity: sha1-DNc0B8XRQfljiuHgxj57K/fpkp0=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/react-error-overlay/-/react-error-overlay-5.1.6.tgz'
+  /react-image-file-resizer/0.2.0:
+    dev: false
+    resolution:
+      integrity: sha1-xYwNie3a/tDFIuRB68yl1kXrHyg=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/react-image-file-resizer/-/react-image-file-resizer-0.2.0.tgz'
   /react-is/16.8.6:
     dev: false
     resolution:
@@ -12588,9 +12611,12 @@ specifiers:
   express: ^4.17.1
   express-form-data: ^2.0.10
   node-fetch: ^2.6.0
+  prop-types: ^15.7.2
   react: ^16.8.6
   react-bootstrap: ^1.0.0-beta.10
+  react-contextmenu: ^2.11.0
   react-dom: ^16.8.6
+  react-image-file-resizer: ^0.2.0
   react-router-dom: ^5.0.1
   react-scripts: ^3.0.1
   react-sortable-hoc: ^1.9.1

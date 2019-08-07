@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ContextMenuTrigger } from 'react-contextmenu';
 
 
-class Image extends Component {
+class Picture extends Component {
   render() {
       const style = {
           height: '100%'
@@ -17,4 +17,4 @@ class Image extends Component {
   }
 }
 
-export default Image;
+export default Picture;
