@@ -17,7 +17,7 @@ class AppRouter extends Component {
       });
 
     return (
-    <Router>
+    <Router basename="/instagram-grid">
         <TopBar/>
         <Link to="/" className="App-link">Home</Link>
       
