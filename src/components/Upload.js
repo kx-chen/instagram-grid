@@ -12,7 +12,7 @@ class Upload extends Component {
     if(this.props.show){
      return (
          <div className="plan">
-             <h3>Plan Feed</h3>
+             <h3>{this.props.title}</h3>
              <input type='file' id='single' onChange={this.props.onChange} multiple="multiple" title="Add Images"/>
              {progress}
          </div>

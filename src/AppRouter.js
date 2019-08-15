@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import './assets/App.css';
-import ImageContainer from './components/ImageContainer.js';
+import FeedPreview from './components/FeedPreview.js';
 import TopBar from './components/TopBar.js';
+import FeedPlanner from "./components/FeedPlanner";
 
 
 class AppRouter extends Component {
@@ -21,7 +22,8 @@ class AppRouter extends Component {
         <TopBar/>
         <Link to="/" className="App-link">Home</Link>
       
-        <Route path="/" exact render={() => <ImageContainer/>}/>
+        <Route path="/plan" exact render={() => <FeedPreview title="Feed Planner"/>}/>
+        <Route path="/preview" exact render={() => <FeedPlanner />}/>
     </Router>
     );
   }

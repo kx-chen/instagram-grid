@@ -7,6 +7,7 @@ const gridStyles = {
     gridTemplateColumns: '1fr 1fr 1fr',
     gridTemplateRows: 'auto auto auto',
     gridGap: '2px',
+    width: '100vw',
 };
 
 

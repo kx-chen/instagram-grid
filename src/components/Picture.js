@@ -10,7 +10,7 @@ class Picture extends Component {
     return (
 			<div className="gallery-item" style={this.props.style}>
                 <ContextMenuTrigger id="some_unique_identifier" style={style} keyId={this.props.keyId}>
-                    <img src={this.props.src} onClick={() => this.props.handleClick(this.props.keyId)} className="gallery-image" alt="" id={this.props.keyId}/>
+                    <img src={this.props.src} className="gallery-image" alt="" id={this.props.keyId}/>
                 </ContextMenuTrigger>
 			</div>
       )

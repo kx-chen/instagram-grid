@@ -34,25 +34,18 @@ img {
 }
 
 
-.plan, .gallery, .TopBar, .App-link {
-    display: none!important;
-}
 
-.container {
+.container-app {
     padding-left: 0!important;
     padding-right: 0!important;
     margin-left: 0!important;
     margin-right: 0!important;
 }
 
-.container::after {
-    content: 'Please decrease the width of your screen to use this app.';
-}
 
-@media(max-width: 500px) {
-    .container {
+    .container-app {
         display: block;
-        max-width: 100%;
+        max-width: 100%!important;
         margin: 0 auto;
         padding-top: 40px;
     }
@@ -61,11 +54,6 @@ img {
         display: block!important;
     }
 
-    .container::after {
-        content: '';
-    }
-
-}
 
 /* Gallery Section */
 
