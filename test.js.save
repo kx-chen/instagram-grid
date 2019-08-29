@@ -1,0 +1,18 @@
+const fetch = require('node-fetch');
+        fetch('https://platform.hootsuite.com/oauth2/token', {
+            method: 'post',
+            body: JSON.stringify({
+                grant_type: 'member_app',
+                scope : 'offline',
+                member_id: 35454,
+            }),
+            headers: {
+                'Authorization': 'Basic MTE2NGJjZjItYWQxNC00NDc3LWE1NTAtZjBiZWRkYjZmM2FiOlR5cUVtcS1vci1lUAo=',
+            },
+        }).then(res => res.json())
+          .then(json => {
+              console.log(json);
+          })
+          .catch( (err) => {
+              console.log(err);
+          });

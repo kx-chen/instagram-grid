@@ -14,6 +14,7 @@ dependencies:
   react-router-dom: 5.0.1_react@16.8.6
   react-scripts: 3.0.1
   react-sortable-hoc: 1.9.1_react-dom@16.8.6+react@16.8.6
+  request: 2.88.0
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.0.0:
@@ -10599,7 +10600,7 @@ packages:
       safe-buffer: 5.2.0
       tough-cookie: 2.4.3
       tunnel-agent: 0.6.0
-      uuid: 3.3.2
+      uuid: 3.3.3
     dev: false
     engines:
       node: '>= 4'
@@ -12163,6 +12164,12 @@ packages:
     resolution:
       integrity: sha1-G0r0lV6zB3xQHCOHL8ZROBFYcTE=
       tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/uuid/-/uuid-3.3.2.tgz'
+  /uuid/3.3.3:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha1-RWjwIW54dg7h2/Ok0s9T4iQRKGY=
+      tarball: 'https://artifactory.hootops.com:443/artifactory/api/npm/hootsuite-npm/uuid/-/uuid-3.3.3.tgz'
   /validate-npm-package-license/3.0.4:
     dependencies:
       spdx-correct: 3.1.0
@@ -12766,3 +12773,4 @@ specifiers:
   react-router-dom: ^5.0.1
   react-scripts: ^3.0.1
   react-sortable-hoc: ^1.9.1
+  request: ^2.88.0

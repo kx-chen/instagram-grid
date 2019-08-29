@@ -9,14 +9,6 @@ import FeedPlanner from "./components/FeedPlanner";
 
 class AppRouter extends Component {
   render() {
-      window.hsp.init({
-          "useTheme": false
-      });
-
-      window.hsp.getAuth((data) => {
-         console.log(data);
-      });
-
     return (
     <Router>
         <TopBar/>
