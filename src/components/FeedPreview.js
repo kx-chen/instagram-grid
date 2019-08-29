@@ -74,7 +74,6 @@ class FeedPreview extends Component {
       files.forEach(async (file) => {
         const width = 200;
         const height = 200;
-        const fileName = file.name;
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = event => {
